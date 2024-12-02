@@ -1,4 +1,4 @@
-// src/ContenedorGenerico.java
+
 public class ContenedorGenerico<T> {
     private T elemento;
 

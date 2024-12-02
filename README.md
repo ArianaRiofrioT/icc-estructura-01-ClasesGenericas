@@ -1,12 +1,28 @@
 # Proyecto: Ejemplo de Clases Genéricas en Java
 
-Este proyecto demuestra cómo usar **clases genéricas** en Java mediante ejemplos prácticos de uso.
+Este proyecto muestra cómo implementar **clases genéricas** en Java, proporcionando ejemplos prácticos mediante un contenedor genérico que gestiona distintos tipos de objetos (`Persona` y `Producto`).
 
-## ¿Qué son las clases genéricas?
+## ¿Qué son los Datos y Clases Genéricas?
 
-Una **clase genérica** es una clase que permite manejar múltiples tipos de datos sin necesidad de escribir código específico para cada tipo. Utilizan un **parámetro de tipo genérico** (como `<T>`) que se sustituye con un tipo real al momento de usarla.
+### Definición de Clases Genéricas
 
-Por ejemplo:
+En Java, una **clase genérica** es una clase que utiliza parámetros de tipo (`<T>`) para representar un tipo de dato que se definirá más tarde, cuando se cree una instancia de la clase. Esto permite crear una única implementación que puede funcionar con diferentes tipos de datos sin perder la seguridad de tipo en tiempo de compilación.
+
+**Sintaxis básica**:
 ```java
-ContenedorGenerico<String> contenedorCadena = new ContenedorGenerico<>("Hola, Mundo");
-ContenedorGenerico<Integer> contenedorEntero = new ContenedorGenerico<>(123);
+public class ClaseGenerica<T> {
+    private T elemento;
+
+    public ClaseGenerica(T elemento) {
+        this.elemento = elemento;
+    }
+
+    public T getElemento() {
+        return elemento;
+    }
+
+    public void setElemento(T elemento) {
+        this.elemento = elemento;
+    }
+}
+
